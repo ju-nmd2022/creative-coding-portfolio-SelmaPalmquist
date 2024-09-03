@@ -6,7 +6,7 @@ let amount = 1000;
 function setup (){
     createCanvas(innerWidth, innerHeight);
     background(247,241,193);
-    frameRate(8);
+    frameRate(10);
 }
 
 function shapes (){
@@ -26,7 +26,6 @@ function draw(){
     }
     y += stripeWidth + gap;
 
-    //triangle(random(600), random(600), 0, 0, 10, 5);
     shapes();
 }
 }

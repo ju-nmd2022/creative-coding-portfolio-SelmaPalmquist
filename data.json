@@ -5,8 +5,13 @@
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   },
   {
-    "file": "experiments/exaperiment-1.js",
+    "file": "experiments/experiment-1.js",
     "name": "Zach-inspiration",
+    "description": "I decided to take inspiration from Zach Lieberman through recreating the shapes an colors but with some randomness and a loop to make it change."
+  },
+  {
+    "file": "experiments/experiment-2.js",
+    "name": "Flow Fields",
     "description": "I decided to take inspiration from Zach Lieberman through recreating the shapes an colors but with some randomness and a loop to make it change."
   }
 ]
