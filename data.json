@@ -6,12 +6,12 @@
   },
   {
     "file": "experiments/experiment-1.js",
-    "name": "Zach-inspiration",
-    "description": "I decided to take inspiration from a work by boris87 (https://www.generativehut.com/post/harnessing-randomization-in-adobe-illustrator) that he created with Adobe Illustrator, but I want to create it with color."
+    "name": "Colorful clutter",
+    "description": "I decided to create something with Perlin noise, but I want to create it with color."
   },
   {
     "file": "experiments/experiment-2.js",
-    "name": "Flow Fields",
+    "name": "Flow fields?",
     "description": "I wanted to create something using flow fields since it can give a cool effect."
   },
   {

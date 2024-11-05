@@ -1,3 +1,42 @@
+//followed video provided by Garrit Shaap on perlin noise
+//https://play.ju.se/media/Noise+examples%2C+and+Vera+Moln%C3%A1r/0_3pcpvm3q
+
+function setup() {
+  createCanvas(600, 600);
+}
+
+const size = 10;
+const divider = 20;
+const numRows = 60;
+const numCols = 60;
+
+function draw() {
+  background(255);
+  noStroke();
+
+  for (let y = 0; y < numRows; y++) {
+    for (let x = 0; x < numCols; x++) {
+      const noiseValue = noise(x / divider, y / divider);
+      const value = noiseValue * size;
+      
+      const r = random(0, 255);
+      const g = random(0, 255);
+      const b = random(0, 255);
+
+      fill(r, g, b);
+      ellipse(size / 2 + x * size, size / 2 + y * size, value);
+    }
+  }
+  noLoop();
+}
+
+
+
+/*
+let x = 0;
+let y = 0;
+let s = 40;
+let d = 0;
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
@@ -6,85 +45,19 @@ function setup() {
 
 function square(){
   fill(255);
-  rect(100,100,100);
-}
+  strokeWeight(3);
+  rect(x,y,s - d);
 
-/*
-let squareSize = 1;
-let amount = 17;
-let gap = 40;
-
-function setup() {
-  createCanvas(innerWidth, innerHeight);
-  background(0);
-}
-
-function squares() {
-  noStroke();
-  let square = 1;
-
-  for (let y = 0; y < square; y++) {
-    for (let x = 0; x < square; x++) {
-      fill(255, 155);
-      rect(x, y, 40);
+  
+  for (let s = 0; s < square; s++) {
+    for (let d = 0; d < square; d++) {
 
       //rotate(PI / 5);
     }
   }
 }
 
-function draw() {
-  // to center the grid in the canvas (y coordinates)
-  let y = (height - squareSize * amount - gap * (amount - 1)) / 2;
-  for (let i = 0; i < amount; i++) {
-    // to center the grid in the canvas (x coordinates)
-    let x = (width - squareSize * amount - gap * (amount - 1)) / 2;
-    for (let j = 0; j < amount; j++) {
-      push();
-      translate(x, y);
-      squares();
-      pop();
-      x += squareSize + gap;
-    }
-    y += squareSize + gap;
-  }
-}
-*/
-
-
-
-
-/*
-//my original zach liebermann bullsht
-let gap = 2;
-let stripeWidth = 3;
-let amount = 1000;
-
-
-function setup (){
-    createCanvas(innerWidth, innerHeight);
-    background(247,241,193);
-    frameRate(10);
-}
-
-function shapes (){
-  rotate(PI / random(0, 3));
-  rect(random(0, 600), (random(0, 600)), random(10, 40));
-
-}
-
 function draw(){
-  noStroke();
-
-  for(let y = 0; y < 1; y++) {
-    for (let x = 0; x < amount; x++) {
-      fill(random(0, 255), random(0, 255), random(0, 255));
-    rect(x,y,stripeWidth,innerHeight);
-    x += stripeWidth + gap;
-    }
-    y += stripeWidth + gap;
-
-    shapes();
-}
+  square();
 }
 */
