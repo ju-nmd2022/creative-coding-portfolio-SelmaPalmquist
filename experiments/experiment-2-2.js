@@ -8,7 +8,7 @@ const size = 100;
 const layers = 10; 
 
 function drawLayers(x, y, size, layers) {
-  noFill();
+  
   rectMode(CENTER);
 
   //random movement for the squares
@@ -23,6 +23,12 @@ function drawLayers(x, y, size, layers) {
 
   for (let i = 0; i < layers; i++) {
     const s = (size / layers) * (layers - i); 
+
+    //random color for each layer
+    const r = random(0, 255);
+    const g = random(0, 255);
+    const b = random(0, 255);
+    fill(r, g, b);
 
     //random stroke thickness for each layer. Bassima showed me this specific randomisation syntax
     strokeWeight(random(1, 5));
