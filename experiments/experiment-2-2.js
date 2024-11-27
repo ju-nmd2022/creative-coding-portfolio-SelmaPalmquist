@@ -1,5 +1,4 @@
 //followed tutorial provided by Garrit Shaap on the later half of https://play.ju.se/media/Noise+examples%2C+and+Vera+Moln%C3%A1r/0_3pcpvm3q
-//version 2 here
 function setup() {
   createCanvas(1000, 1000);
 }
@@ -11,17 +10,16 @@ function drawLayers(x, y, size, layers) {
   
   rectMode(CENTER);
 
-  //random movement for the squares
-  const direction = Math.floor(Math.random() * 4); 
-  let moveX = 0;
-  let moveY = 0;
-
-  if (direction === 0) moveY = -5; //move up
-  if (direction === 1) moveY = 5; //move down
-  if (direction === 2) moveX = -5; //move left
-  if (direction === 3) moveX = 5; //move right
-
+  
   for (let i = 0; i < layers; i++) {
+  push();
+  translate(x, y);
+
+
+    //random movement for the squares
+    const rotation = random(0, 360);
+    rotate(rotation);
+
     const s = (size / layers) * (layers - i); 
 
     //random color for each layer
@@ -31,13 +29,14 @@ function drawLayers(x, y, size, layers) {
     fill(r, g, b);
 
     //random stroke thickness for each layer. Bassima showed me this specific randomisation syntax
-    strokeWeight(random(1, 5));
-    rect(x + moveX, y + moveY, s, s);
+    strokeWeight(random(1, 4));
+    rect(0, 0, s, s);
+    pop();
   }
 }
 
 function draw() {
-  background(255);
+  background(0);
 
   for (let y = 0; y < 10; y++) {
     for (let x = 0; x < 10; x++) {
@@ -47,3 +46,6 @@ function draw() {
   
   noLoop();
 }
+
+
+
