@@ -1,17 +1,12 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  },
-  {
     "file": "experiments/experiment-1-1.js",
-    "name": "Colorful clutter",
-    "description": "I decided to create something with Perlin noise, but I want to create it with color."
+    "name": "Birthday Sprinkles",
+    "description": "I decided to create something with Perlin noise, but I want to create it with color. It reminds me of birthday cake sprinkles!"
   },
   {
     "file": "experiments/experiment-1-2.js",
-    "name": "Colorful clutter version 2",
+    "name": "Fire?",
     "description": "I decided to create something with Perlin noise, but I want to create it with color."
   },
   {
@@ -21,18 +16,18 @@
   },
   {
     "file": "experiments/experiment-2-1.js",
-    "name": "Optical illusion sqares",
-    "description": "For the second recreation of part one I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
+    "name": "Optical illusion squares",
+    "description": "For the second recreation I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
   },
   {
     "file": "experiments/experiment-2-2.js",
-    "name": "Optical illusion sqares version 2",
-    "description": "For the second recreation of part one I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
+    "name": "Pointy flowers",
+    "description": "For the first variation of the optical illusion I created these flower-like objects that have randomized color and rotation."
   },
   {
     "file": "experiments/experiment-2-3.js",
-    "name": "Optical illusion sqares version 3",
-    "description": "For the second recreation of part one I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
+    "name": "Artsy circles",
+    "description": "For the second variation of the optical illusion I created these varied the shape by makeing them ellipses with the randomized color, stroke and rotation still implemented. I also made them downsize and move father to the edges using offset radius."
   },
   {
     "file": "experiments/experiment-3-1.js",

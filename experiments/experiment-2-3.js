@@ -1,5 +1,4 @@
-//followed tutorial provided by Garrit Shaap on the later half of https://play.ju.se/media/Noise+examples%2C+and+Vera+Moln%C3%A1r/0_3pcpvm3q
-//version 3 here
+//based on tutorial provided by Garrit Shaap on the later half of https://play.ju.se/media/Noise+examples%2C+and+Vera+Moln%C3%A1r/0_3pcpvm3q
 function setup() {
   createCanvas(1000, 1000);
 }
@@ -8,25 +7,29 @@ const size = 100;
 const layers = 10; 
 
 function drawLayers(x, y, size, layers) {
-  noFill();
-  rectMode(CENTER);
-
-  //random movement for the squares
-  const direction = Math.floor(Math.random() * 4); 
-  let moveX = 0;
-  let moveY = 0;
-
-  if (direction === 0) moveY = -5; //move up
-  if (direction === 1) moveY = 5; //move down
-  if (direction === 2) moveX = -5; //move left
-  if (direction === 3) moveX = 5; //move right
-
+  
+  ellipseMode(CENTER);
   for (let i = 0; i < layers; i++) {
+  push();
+  translate(x,y);
+
+    //random movement for the circles. Implemented based on Bassimas color randomization method
+    const rotation = random(0, 360);
+    rotate(rotation);
+
+    //the smaller a circle layer is, the father it moves from the center. This was done with help of chatgpt
+    const offsetRadius = (size / 2) * (i / layers); 
+        translate(offsetRadius, 0);
+
     const s = (size / layers) * (layers - i); 
 
+    //random color for each layer with pretty selection of colors. Used the method Bassima learned me
+    fill(random(100, 255), random(100, 255), random(100, 255));
+
     //random stroke thickness for each layer. Bassima showed me this specific randomisation syntax
-    strokeWeight(random(1, 5));
-    rect(x + moveX, y + moveY, s, s);
+    strokeWeight(random(1, 6));
+    ellipse(0, 0, s, s);
+    pop();
   }
 }
 

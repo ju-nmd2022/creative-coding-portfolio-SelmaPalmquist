@@ -22,11 +22,8 @@ function drawLayers(x, y, size, layers) {
 
     const s = (size / layers) * (layers - i); 
 
-    //random color for each layer
-    const r = random(0, 255);
-    const g = random(0, 255);
-    const b = random(0, 255);
-    fill(r, g, b);
+    //random color for each layer with pretty selection of colors
+    fill(random(100, 255), random(100, 255), random(100, 255));
 
     //random stroke thickness for each layer. Bassima showed me this specific randomisation syntax
     strokeWeight(random(1, 4));
