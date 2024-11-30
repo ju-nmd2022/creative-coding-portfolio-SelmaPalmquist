@@ -11,8 +11,8 @@
   },
   {
     "file": "experiments/experiment-1-3.js",
-    "name": "Colorful clutter version 3",
-    "description": "I decided to create something with Perlin noise, but I want to create it with color."
+    "name": "Disco lights",
+    "description": "For this second variation of perlin noise, I integrated another color in the gradient and made the background black to create a disco effect. The squares also vary in rotation randomly."
   },
   {
     "file": "experiments/experiment-2-1.js",

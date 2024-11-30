@@ -21,7 +21,8 @@ function draw() {
   let gradient = drawingContext.createLinearGradient(0, 0, 0, height);
 
   gradient.addColorStop(0, color(90, 100, 100, 100)); 
-  gradient.addColorStop(1, color(240, 100, 100, 100));
+  gradient.addColorStop(0.5, color(240, 100, 100, 100));
+  gradient.addColorStop(1, color(340, 100, 100, 100));
   drawingContext.fillStyle = gradient;
 
   for (let y = 0; y < numRows; y++) {
@@ -31,7 +32,6 @@ function draw() {
     
       const value = noise(x / divider, y / divider, counter) * size;
       
-   
       rect(size / 2 + x * size, size / 2 + y * size, value);
       
     }
