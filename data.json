@@ -6,8 +6,8 @@
   },
   {
     "file": "experiments/experiment-1-2.js",
-    "name": "Fire?",
-    "description": "I decided to create something with Perlin noise, but I want to create it with color."
+    "name": "Fire",
+    "description": "For the first variation of the perlin noise, I wanted to replicate fire through linear gradients and opacity change. I got this idea since Perlin noise resembles smoke so much in its smooth movements."
   },
   {
     "file": "experiments/experiment-1-3.js",
