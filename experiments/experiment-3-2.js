@@ -8,8 +8,11 @@ class Agent {
       this.maxSpeed = maxSpeed;
       this.maxForce = maxForce;
 
+      this.strokeWeight = 1;
+      this.increasing = true;
+
       //randomize colors from selected colors that are similar to the inspo picture
-      let c = Math.floor(Math.random() * 6);
+      let c = Math.floor(Math.random() * 8);
 
       if (c === 0) {
         this.color = color(105, 100, 100, 100);
@@ -18,9 +21,13 @@ class Agent {
       } else if (c === 2) {
         this.color = color(10, 100, 100, 100);
       } else if (c === 3) {
-        this.color = color(254, 88, 100, 100);
+        this.color = color(244, 88, 100, 100);
       } else if (c === 4) {
         this.color = color(184, 100, 100, 100);
+      } else if (c === 5) {
+        this.color = color(266, 100, 100, 100);
+      } else if (c === 6) {
+        this.color = color(32, 100, 100, 100);
       } else {
         this.color = color(309, 100, 100, 100);
       }
@@ -45,6 +52,21 @@ class Agent {
       this.position.add(this.velocity);
       this.acceleration.mult(0);
     }
+
+  //stroke weight is increased until 20, then decreased until 1
+  strokeWeightChange() {
+    if (this.increasing) {
+        this.strokeWeight += 0.5; 
+        if (this.strokeWeight >= 20) {
+          this.increasing = false; 
+        }
+      } else {
+        this.strokeWeight -= 0.4; 
+        if (this.strokeWeight <= 1) {
+          this.increasing = true; 
+        }
+      }
+  }
   
     checkBorders() {
       if (this.position.x < 0) {
@@ -66,7 +88,8 @@ class Agent {
     draw() {
       push();
       stroke(this.color);
-      strokeWeight(5);
+      this.strokeWeightChange(); 
+    strokeWeight(this.strokeWeight);
       line(
         this.lastPosition.x,
         this.lastPosition.y,
@@ -76,6 +99,8 @@ class Agent {
       pop();
     }
   }
+
+
   
   function setup() {
     createCanvas(innerWidth, innerHeight);
@@ -130,6 +155,7 @@ class Agent {
   }
 
 
+//followed tutorial for static flow fields: https://youtu.be/R0OFyWEglGA?si=HNztviEdMky8rFld
 /*function setup() {
 createCanvas(1000,1000);
 colorMode(HSB, 360, 120, 100, 25);
