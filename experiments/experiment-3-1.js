@@ -7,6 +7,13 @@ class Agent {
     this.velocity = createVector(0, 0);
     this.maxSpeed = maxSpeed;
     this.maxForce = maxForce;
+
+    let c = Math.floor(Math.random() * 2);
+    if (c === 0) {
+      this.color = color(0, 20);
+    } else {
+      this.color = color(255, 30);
+    }
   }
 
   follow(desiredDirection) {
@@ -48,8 +55,7 @@ class Agent {
 
   draw() {
     push();
-    
-    stroke(40, 200, 200, 40);
+    stroke(this.color);
     strokeWeight(2);
     line(
       this.lastPosition.x,
@@ -63,7 +69,7 @@ class Agent {
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
-  background(255, 255, 255);
+  background(150);
   field = generateField();
   generateAgents();
 }

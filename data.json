@@ -31,8 +31,8 @@
   },
   {
     "file": "experiments/experiment-3-1.js",
-    "name": "Flow fields version 1",
-    "description": "For the second recreation of part one I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
+    "name": "Marble stone",
+    "description": "For the more complex experimenting, I knew I wanted to use flow fields. When working with it, the structures forming started reminding me of stone, specifically marble. So I made the backgroud gray and randomised the color of the lines between black and white using Math.random. "
   },
   {
     "file": "experiments/experiment-3-2.js",
