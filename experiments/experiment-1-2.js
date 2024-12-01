@@ -2,7 +2,7 @@
 //https://play.ju.se/media/Noise+examples%2C+and+Vera+Moln%C3%A1r/0_3pcpvm3q
 //and the gradual color change was created based on https://www.youtube.com/watch?v=-MUOweQ6wac&t=60s 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(1000, 1000);
   colorMode(HSB, 360, 100, 100, 100);
   frameRate(4);
 }

@@ -2,7 +2,7 @@
 //https://play.ju.se/media/Noise+examples%2C+and+Vera+Moln%C3%A1r/0_3pcpvm3q
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(1000, 1000);
   frameRate(4);
 }
 
