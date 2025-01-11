@@ -40,7 +40,12 @@
     "description": "I decided to recreate the colorful artwork originally done by Sighack I loved the bright color, which is what drew me to create this, where the stroke is constantly increasing and decreasing."
   },
   {
-    "file": "experiments/experiment-4.js",
+    "file": "experiments/experiment-4-1.js",
+    "name": "Insect party",
+    "description": "I started experimenting with Boid particles and realized that the movements reminded me of insects moving, like ants in an ant farm, so I wanted to turn the particles into insects moving around on grass. I also wanted to make them differnt colors and have separate behavior based on color, so the brown ones are faster than the black. "
+  },
+  {
+    "file": "experiments/experiment-5-1.js",
     "name": "Proximity music tone.js",
     "description": "The idea is to create a something where random shapes in random size will shift the sound level, to create the effect of diffrerent proximities. I also decided to add different shapes to play around with sound design, a rougher sound for squares and softer for ellipses. "
   }
