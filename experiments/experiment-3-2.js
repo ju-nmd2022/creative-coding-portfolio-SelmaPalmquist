@@ -32,7 +32,7 @@ class Agent {
         this.color = color(309, 100, 100, 100);
       }
     }
-  
+
     follow(desiredDirection) {
       desiredDirection = desiredDirection.copy();
       desiredDirection.mult(this.maxSpeed);
@@ -128,8 +128,8 @@ class Agent {
       let agent = new Agent(
         Math.random() * innerWidth,
         Math.random() * innerHeight,
-        4,
-        0.3
+        3,
+        0.04
       );
       agents.push(agent);
     }

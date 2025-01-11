@@ -36,17 +36,12 @@
   },
   {
     "file": "experiments/experiment-3-2.js",
-    "name": "Flow fields version 2",
-    "description": "For the second recreation of part one I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
-  },
-  {
-    "file": "experiments/experiment-3-3.js",
-    "name": "Flow fields version 3",
-    "description": "For the second recreation of part one I created these randomized squares that have different stroke weights. I was inspired by an image found on google. I liked the trippyness of it and wanted to create something similar using randomness. They also move a tiny bit up, down, left or right to create movement."
+    "name": "Sighack colorful art",
+    "description": "I decided to recreate the colorful artwork originally done by Sighack I loved the bright color, which is what drew me to create this, where the stroke is constantly increasing and decreasing."
   },
   {
     "file": "experiments/experiment-4.js",
     "name": "Proximity music tone.js",
-    "description": "The idea is to create a something where random shapes in random size will shift the sound level, to create the effect of diffrerent proximities. "
+    "description": "The idea is to create a something where random shapes in random size will shift the sound level, to create the effect of diffrerent proximities. I also decided to add different shapes to play around with sound design, a rougher sound for squares and softer for ellipses. "
   }
 ]
