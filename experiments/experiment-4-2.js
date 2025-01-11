@@ -141,17 +141,31 @@ class Boid {
 
   draw() {
     push();
-    // stroke(0, 0, 0, 40);
-    // strokeWeight(1);
-    // line(
-    //   this.lastPosition.x,
-    //   this.lastPosition.y,
-    //   this.position.x,
-    //   this.position.y
-    // );
-    ellipse(this.position.x, this.position.y, 10);
+    translate(this.position.x, this.position.y);
+  
+    //rotate the body so the head always comes first in aim direction
+    let angle = this.velocity.heading();
+    rotate(angle);
+  
+    //the insect body
+    fill(0); 
+    noStroke();
+    ellipse(-4, 0, 15, 14); 
+    ellipse(6, 0, 8, 8);
+  
+    //legs
+    stroke(0);
+    strokeWeight(2);
+    //left
+    line(-4, -6, -8, -10);
+    line(-4, 6, -8, 10);
+    //right
+    line(-4, -6, 0, -10);
+    line(-4, 6, 0, 10);
+  
     pop();
   }
+  
 }
 
 function setup() {
@@ -174,7 +188,7 @@ function generateAgents() {
 let boids = [];
 
 function draw() {
-  background(255, 255, 255);
+  background(107, 175, 89);
   for (let boid of boids) {
     boid.flock(boids);
     boid.update();
