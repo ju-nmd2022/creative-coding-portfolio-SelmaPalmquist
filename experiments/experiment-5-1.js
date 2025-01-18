@@ -2,9 +2,6 @@
 //tone.js will go here. the idea is to make the sound change based on shape and size
 const synth = new Tone.Synth().toDestination();
 
-
-
-
 function setup() {
     createCanvas(600, 600);
     background(0);
@@ -14,8 +11,6 @@ function setup() {
 }
 
 let isToneStarted = false;
-
-
 
 function mousePressed() {
     if (mouseX > 200 && mouseX < 400 && mouseY > 200 && mouseY < 300) {
@@ -51,11 +46,6 @@ function mousePressed() {
         console.log("Tone didnt start.")
       }
     }
-
-
-
-    
-
 
 
     /* 
