@@ -1,4 +1,3 @@
-
 // Used some code from Daniel Shiffmans Nature of code: https://github.com/nature-of-code/noc-examples-p5.js/blob/master/chp06_agents/NOC_6_09_Flocking/boid.js
 class Boid {
   constructor(x, y, maxSpeed, maxForce) {
