@@ -1,6 +1,6 @@
 //tone.js will go here. the idea is to make the sound change based on shape and size
 //started off by using this https://github.com/Tonejs/Tone.js/blob/main/examples/simpleHtml.html
-//and following this tutorial from youtube https://www.youtube.com/watch?v=7ZhbKclhDf4 + help creating the occilator from https://ju.slides.com/garrit/cc2024-generative-sound?token=oNT3eWri#/3/1
+//and following this tutorial from youtube https://www.youtube.com/watch?v=7ZhbKclhDf4 + help creating the oscillator from https://ju.slides.com/garrit/cc2024-generative-sound?token=oNT3eWri#/3/1
 //as well as ChatGPT for help with allowing AudioContext according to the Web Audio API to let the sounds show up + volume adjustment
 const volume = new Tone.Volume(-10).toDestination();
 const oscillator = new Tone.Oscillator({frequency: 440, type: "sine", }).connect(volume);
