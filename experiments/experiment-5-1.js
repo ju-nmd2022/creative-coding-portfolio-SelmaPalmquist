@@ -2,8 +2,11 @@
 //started off by using this https://github.com/Tonejs/Tone.js/blob/main/examples/simpleHtml.html
 //and following this tutorial from youtube https://www.youtube.com/watch?v=7ZhbKclhDf4
 //as well as ChatGPT for help with allowing AudioContext according to the Web Audio API to let the sounds show up
-const synth = new Tone.Synth().toDestination();
+//const synth = new Tone.Synth().toDestination();
+const oscillator = new Tone.Oscillator().toDestination();
 let isToneStarted = false;
+const volume = new Tone.Volume().toDestination();
+volume.volume.value = (size + 10);
 
 function setup() {
     createCanvas(600, 600);
@@ -28,8 +31,8 @@ function mousePressed() {
   function drawShapes() {
     noStroke();
     //randomized position and size for each shape
-    let xPosition = random(0, width); 
-    let yPosition = random(0, height); 
+    let xPosition = random(0, 400); 
+    let yPosition = random(0, 400); 
     let size = random(10, 150); 
   
     //randomized color for each shape
@@ -44,11 +47,28 @@ function mousePressed() {
         playSound(size);
     }
   }
+  
 
-  function playSound(size) {
+  function playSound() {
     //map the size of the shape to a frequency range between 200Hz and 800Hz
-    const frequency = map(size, 10, 150, 200, 800); 
-    synth.triggerAttackRelease(frequency, "8n");
+    //const frequency = map(size, 10, 150, 200, 800); 
+
+    //const volume = new Tone.Volume().toDestination();
+    //volume.volume.value = (size + 10);
+    //soundVolume.volume.value = volume; 
+    
+    let soundType;
+    if(shape === 0){
+      soundType = square;
+      oscillator.type = "square";
+    } else{
+      soundType = sine;
+      oscillator.type = "sine";
+    }
+
+    //synth.triggerAttackRelease(frequency, "8n");
+    oscillator.triggerAttackRelease(440, soundType).connect(volume);
+    
   }
  
     function draw() {
