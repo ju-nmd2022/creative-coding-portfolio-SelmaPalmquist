@@ -1,12 +1,10 @@
 //tone.js will go here. the idea is to make the sound change based on shape and size
 //started off by using this https://github.com/Tonejs/Tone.js/blob/main/examples/simpleHtml.html
-//and following this tutorial from youtube https://www.youtube.com/watch?v=7ZhbKclhDf4
-//as well as ChatGPT for help with allowing AudioContext according to the Web Audio API to let the sounds show up
-//const synth = new Tone.Synth().toDestination();
-const oscillator = new Tone.Oscillator().toDestination();
+//and following this tutorial from youtube https://www.youtube.com/watch?v=7ZhbKclhDf4 + help creating the occilator from https://ju.slides.com/garrit/cc2024-generative-sound?token=oNT3eWri#/3/1
+//as well as ChatGPT for help with allowing AudioContext according to the Web Audio API to let the sounds show up + volume adjustment
+const volume = new Tone.Volume(-10).toDestination();
+const oscillator = new Tone.Oscillator({frequency: 440, type: "sine", }).connect(volume);
 let isToneStarted = false;
-const volume = new Tone.Volume().toDestination();
-volume.volume.value = (size + 10);
 
 function setup() {
     createCanvas(600, 600);
@@ -23,6 +21,7 @@ function mousePressed() {
       Tone.start().then(() => {
         isToneStarted = true;
         console.log("Tone.js started!");
+        oscillator.start();
       });
     }
   }
@@ -38,36 +37,23 @@ function mousePressed() {
     //randomized color for each shape
     fill(random(100, 255), random(100, 255), random(100, 255));
   
+    //type of shape and thereby the sound it emitts is randomized
     let shape = Math.floor(Math.random() * 2);
     if(shape === 0){
         rect(xPosition, yPosition, size, size);
-        playSound(size);
+        playSound(size, "square");
     } else {
         ellipse(xPosition, yPosition, size, size);
-        playSound(size);
+        playSound(size, "sine");
     }
   }
   
 
-  function playSound() {
-    //map the size of the shape to a frequency range between 200Hz and 800Hz
-    //const frequency = map(size, 10, 150, 200, 800); 
-
-    //const volume = new Tone.Volume().toDestination();
-    //volume.volume.value = (size + 10);
-    //soundVolume.volume.value = volume; 
-    
-    let soundType;
-    if(shape === 0){
-      soundType = square;
-      oscillator.type = "square";
-    } else{
-      soundType = sine;
-      oscillator.type = "sine";
-    }
-
-    //synth.triggerAttackRelease(frequency, "8n");
-    oscillator.triggerAttackRelease(440, soundType).connect(volume);
+  function playSound(size, soundType) {
+    //volume changes based on size to give the effect of different proximity
+    const mappedVolume = map(size, 10, 150, -40, -5);
+    volume.volume.value = mappedVolume; 
+    oscillator.type = soundType;
     
   }
  

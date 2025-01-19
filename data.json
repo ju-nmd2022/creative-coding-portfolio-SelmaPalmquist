@@ -48,10 +48,5 @@
     "file": "experiments/experiment-5-1.js",
     "name": "Proximity music tone.js",
     "description": "The idea is to create a something where random shapes in random size will shift the sound level, to create the effect of diffrerent proximities. I also decided to add different shapes to play around with sound design, a rougher sound for squares and softer for ellipses. "
-  },
-  {
-    "file": "experiments/tonework.js",
-    "name": "Proximity music tone.js",
-    "description": "The idea is to create a something where random shapes in random size will shift the sound level, to create the effect of diffrerent proximities. I also decided to add different shapes to play around with sound design, a rougher sound for squares and softer for ellipses. "
   }
 ]
